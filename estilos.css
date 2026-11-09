@@ -1,0 +1,456 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f1f2f3;
+    color: #292d30;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: #24292d;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    background: #e3a64f;
+    color: #25292c;
+    padding: 13px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    color: #b8bec2;
+    font-size: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #e3a64f;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    color: white;
+
+    background:
+    linear-gradient(90deg, #22282df2, #343c42d9),
+    url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.etiqueta {
+    color: #e3a64f;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #e3a64f;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #d0d4d6;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background: #e3a64f;
+    color: #22282d;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* BIENVENIDA */
+
+.bienvenida {
+    text-align: center;
+    padding: 70px 10%;
+    background: white;
+}
+
+.bienvenida h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.bienvenida p {
+    color: #737b80;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* SECCIONES */
+
+.seccion {
+    padding: 80px 8%;
+}
+
+.mineria {
+    background: #252b30;
+    color: white;
+}
+
+.ferreteria {
+    background: #e8ebed;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo span {
+    color: #d69b4c;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.titulo h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.titulo p {
+    color: #899196;
+}
+
+/* PRODUCTOS */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.producto {
+    padding: 28px;
+    background: #343c42;
+    border: 1px solid #4b555c;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.producto:hover {
+    transform: translateY(-7px);
+    border-color: #d69b4c;
+}
+
+.producto h3 {
+    margin: 15px 0;
+    font-size: 19px;
+}
+
+.producto p {
+    font-size: 13px;
+    color: #b9c0c4;
+    line-height: 1.8;
+}
+
+.icono {
+    font-size: 30px;
+    color: #e3a64f;
+}
+
+.ferreteria .producto {
+    background: white;
+    color: #292d30;
+    border: 1px solid #d8dddf;
+}
+
+.ferreteria .producto p {
+    color: #727a80;
+}
+
+/* INVENTARIO */
+
+.inventario {
+    padding: 80px 7%;
+    background: #f6f7f8;
+}
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.resumen-card {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #66727a;
+    box-shadow: 0 4px 15px #0000000a;
+}
+
+.resumen-card h3 {
+    font-size: 13px;
+    color: #737c82;
+}
+
+.resumen-card strong {
+    display: block;
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+.resumen-card.alerta {
+    border-color: #d69b4c;
+}
+
+.panel {
+    background: white;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 20px #0000000b;
+}
+
+.panel h3 {
+    margin-bottom: 20px;
+}
+
+#formulario {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input, select {
+    padding: 13px;
+    border: 1px solid #d9dfe2;
+    border-radius: 4px;
+    min-width: 0;
+}
+
+#formulario button,
+.exportar {
+    background: #30383e;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#formulario button:hover,
+.exportar:hover {
+    background: #d69b4c;
+    color: #222;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filtros button {
+    background: #e9edef;
+    border: none;
+    padding: 10px 17px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.filtros button:hover {
+    background: #d69b4c;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e6e9eb;
+    font-size: 13px;
+}
+
+th {
+    background: #30383e;
+    color: white;
+}
+
+.estado-ok {
+    color: #23804a;
+    font-weight: bold;
+}
+
+.estado-bajo {
+    color: #c17a20;
+    font-weight: bold;
+}
+
+.acciones button {
+    border: none;
+    background: none;
+    color: #a76e27;
+    cursor: pointer;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.exportar {
+    margin-top: 20px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    text-align: center;
+    background: #252b30;
+    color: white;
+    padding: 80px 20px;
+}
+
+.contacto h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contacto p {
+    color: #b9c0c4;
+    margin-bottom: 30px;
+}
+
+footer {
+    background: #1c2125;
+    color: #aeb7bd;
+    text-align: center;
+    padding: 22px;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+    #formulario {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #formulario button {
+        grid-column: span 2;
+    }
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resumen {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 500px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .titulo h2 {
+        font-size: 27px;
+    }
+
+    #formulario {
+        grid-template-columns: 1fr;
+    }
+
+    #formulario button {
+        grid-column: auto;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+}
